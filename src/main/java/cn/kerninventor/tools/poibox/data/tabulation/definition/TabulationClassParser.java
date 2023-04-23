@@ -54,6 +54,9 @@ public class TabulationClassParser {
         List<ColumnDefinition> columnDefinitions = parseColumns(fields, theadStyleMap, tbodyStyleMap);
         beanDefinition.setColumnDefinitions(columnDefinitions);
         List<BannerDefinition> bannerDefinitions = parseBanners(excelTabulation.banners(), poibox.styler());
+        for (BannerDefinition bannerDefinition : bannerDefinitions) {
+            bannerDefinition.adjustCellRangeAddress(beanDefinition.getStartRowIndex(), beanDefinition.getColumnDefinitions());
+        }
         beanDefinition.setBannerDefinitions(bannerDefinitions);
         return beanDefinition;
     }
