@@ -1,4 +1,4 @@
-import cn.kerninventor.tools.poibox.data.tabulation.validation.array.EnumExplicitList;
+import io.github.huangjietian.data.tabulation.validation.array.EnumExplicitList;
 
 /**
  * <h1>中文注释</h1>
